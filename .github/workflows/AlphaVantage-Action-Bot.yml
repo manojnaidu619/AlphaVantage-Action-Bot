@@ -2,8 +2,8 @@ name: AlphaVantage-Action-Bot
 
 on:
   schedule:
-    - cron: "*/30 * * * *"  
-    # Runs every 30th minute  
+    - cron: "0 0 1 1 *"  
+    # Runs on 1st Jan every year  
     # To know more about crontabs refer https://crontab.guru/
 
 jobs:
