@@ -6,16 +6,16 @@ from alpha_vantage.cryptocurrencies import CryptoCurrencies
 
 ####### Values could be customized ############
 
-CHARTDOMAIN = 'cryptocurrency'
+CHARTDOMAIN = 'stock'
 #['stock', 'cryptocurrency']
 
-REQ_TYPE = 'monthly'
+REQ_TYPE = 'daily'
 #['intraday', 'daily', 'weekly', 'monthly'] are the other options.
 
 SYMBOL = 'AAPL'
 # Stock Symbol
 
-INTERVAL = 1
+INTERVAL = 5
 #[1, 5, 15, 30, 60] are the other options.
 
 OUTPUTSIZE = 'full'
@@ -27,7 +27,7 @@ GRIDVIEW = True
 PLOT = 'close'
 #['close', 'open', 'high', 'low'] are the other options
 
-COLOR = 'green'
+COLOR = 'black'
 
 RENDERLINE = 5
 # Line inside Readme at which the chart to be rendered.
