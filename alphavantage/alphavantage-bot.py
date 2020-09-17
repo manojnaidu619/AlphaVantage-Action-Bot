@@ -155,7 +155,7 @@ def save_chart(values, crypto_market):
 
 def rewrite_readme():
     alt_text = 'AlphaVantage-Action-Bot-Chart'
-    promote_text = "**Realtime Stock/Crytpocurrency Chart📈 Rendered By [AlphaVantage-Action-Bot](https://github.com/manojnaidu619/AlphaVantage-Action-Bot)**"
+    promote_text = "**Realtime Stock/Crytpocurrency Chart📈  Rendered By [AlphaVantage-Action-Bot](https://github.com/manojnaidu619/AlphaVantage-Action-Bot)**"
     code_line = f'![{alt_text}]({PATHTOCHART}/chart.png)'
     readme = './README.md'
     line = RENDERLINE
@@ -168,8 +168,7 @@ def rewrite_readme():
 
     with open(readme, 'r') as file: data = file.readlines()
     for index, x in enumerate(data):
-        if x.startswith("![{}]".format(alt_text)): del data[index]
-        if x.startswith('**Realtime Stock/Crytpocurrency Chart'): del data[index]   
+        if 'AlphaVantage-Action-Bot' in x: del data[index]   
     data = insert_string(data, line, code_line)    
     with open(readme, 'w') as file: file.writelines( data )
         
