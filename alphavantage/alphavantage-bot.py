@@ -162,8 +162,8 @@ def rewrite_readme():
     line -= 1
 
     def insert_string(array, pos, data):
-        array.insert(pos, "{}".format(data))
-        array.insert(pos + 1, "\n {} \n".format(promote_text))
+        array.insert(pos, "{}\n".format(data))
+        array.insert(pos + 1, "{}\n".format(promote_text))
 
     with open(readme, 'r') as file: data = file.readlines()
     for index, x in enumerate(data):
