@@ -162,12 +162,13 @@ def rewrite_readme():
     line -= 1
 
     def insert_string(array, pos, data):
-        array.insert(pos, "\n {} \n".format(data))
-        array.insert(pos + 1, "{} \n".format(promote_text))
+        array.insert(pos, "{}".format(data))
+        array.insert(pos + 1, "\n {} \n".format(promote_text))
 
     with open(readme, 'r') as file: data = file.readlines()
     for index, x in enumerate(data):
-        if 'AlphaVantage-Action-Bot' in x: del data[index]   
+        if x.startswith("![{}]".format(alt_text)): del data[index]   
+        if x.startswith("**Realtime Stock/Crytpocurrency Chart"): del data[index]    
     insert_string(data, line, code_line)    
     with open(readme, 'w') as file: file.writelines( data )
         
