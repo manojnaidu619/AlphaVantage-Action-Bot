@@ -1,6 +1,10 @@
 name: AlphaVantage-Action-Bot
 
-on: push
+on:
+  schedule:
+    - cron: "*/30 * * * *"  
+    # Runs every 30th minute  
+    # To know more about crontabs refer https://crontab.guru/
 
 jobs:
   alphavantage-render-chart:
