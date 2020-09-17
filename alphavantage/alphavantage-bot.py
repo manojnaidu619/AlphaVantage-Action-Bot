@@ -21,7 +21,7 @@ INTERVAL = 1
 OUTPUTSIZE = 'full'
 #['compact', 'full'] are the other options.
 
-PATHTOCHART = './stock-chart'
+PATHTOCHART = './alphavantage'
 GRIDVIEW = True
 
 PLOT = 'close'
@@ -32,9 +32,8 @@ COLOR = 'green'
 RENDERLINE = 5
 # Line inside Readme at which the chart to be rendered.
 
-##########################################################
+################### If CHARTDOMAIN is set to 'cryptocurrency' then edit these below  ####################################
 
-# If CHARTDOMAIN is set to 'cryptocurrency' then edit these
 CRYPTOSYMBOL = 'BTC'
 # Cryptocurrency symbol
 
@@ -49,8 +48,7 @@ CRYPTOPLOT = 'open'
 
 #############  Value customization end    #################
 
-#API_KEY = os.environ['ALPHA_VANTAGE_KEY']
-API_KEY = 'TPQBCYY9DA1F6X6U'
+API_KEY = os.environ['ALPHA_VANTAGE_KEY']
 
 def setup_request_object(request, symbol, interval):
     if CHARTDOMAIN == 'stock':
