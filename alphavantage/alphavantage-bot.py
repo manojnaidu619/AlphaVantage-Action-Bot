@@ -164,12 +164,11 @@ def rewrite_readme():
     def insert_string(array, pos, data):
         array.insert(pos, "\n {} \n".format(data))
         array.insert(pos + 1, "{} \n".format(promote_text))
-        return array
 
     with open(readme, 'r') as file: data = file.readlines()
     for index, x in enumerate(data):
         if 'AlphaVantage-Action-Bot' in x: del data[index]   
-    data = insert_string(data, line, code_line)    
+    insert_string(data, line, code_line)    
     with open(readme, 'w') as file: file.writelines( data )
         
 
