@@ -1,4 +1,4 @@
-import pandas, os
+import pandas, os, random
 import matplotlib.pyplot as plt
 from datetime import datetime
 from alpha_vantage.timeseries import TimeSeries
@@ -6,17 +6,14 @@ from alpha_vantage.cryptocurrencies import CryptoCurrencies
 
 ####### Values could be customized ############
 
-CHARTDOMAIN = 'stock'
-#['stock', 'cryptocurrency']
+CHARTDOMAIN = random.choice(['stock', 'cryptocurrency'])
 
-REQ_TYPE = 'intraday'
-#['intraday', 'daily', 'weekly', 'monthly'] are the other options.
+REQ_TYPE = random.choice(['intraday', 'daily', 'weekly', 'monthly'])
 
-SYMBOL = 'AMZN'
+SYMBOL = random.choice(['MSFT', 'AAPL', 'AMZN', 'GOOGL', 'FB', 'INTC', 'CSCO', 'CMCSA', 'PEP', 'ADBE', 'NVDA', 'NFLX', 'PYPL', 'COST', 'SBUX', 'QCOM', 'INTU', 'TMUS'])
 # Stock Symbol
 
-INTERVAL = 5
-#[1, 5, 15, 30, 60] are the other options.
+INTERVAL = random.choice([1, 5, 15, 30, 60])
 
 OUTPUTSIZE = 'full'
 #['compact', 'full'] are the other options.
@@ -24,27 +21,23 @@ OUTPUTSIZE = 'full'
 PATHTOCHART = './alphavantage'
 GRIDVIEW = True
 
-PLOT = 'close'
-#['close', 'open', 'high', 'low'] are the other options
+PLOT = random.choice(['close', 'open', 'high', 'low'])
 
-COLOR = 'black'
+COLOR = random.choice(['blue', 'green', 'cyan', 'magenta', 'black', 'yellow', 'orange'])
 
-RENDERLINE = 5
+RENDERLINE = 4
 # Line inside Readme at which the chart to be rendered.
 
 ################### If CHARTDOMAIN is set to 'cryptocurrency' then edit these below  ####################################
 
-CRYPTOSYMBOL = 'BTC'
+CRYPTOSYMBOL = random.choice(['BTC', 'ETH', 'LTC', 'XRP', 'PPC', 'DOGE', 'GRC', 'XPM', 'DASH', 'BCH'])
 # Cryptocurrency symbol
 
-CRYPTOMARKET = 'CNY'
-# ['USD', 'CNY'] are the other options
+CRYPTOMARKET = random.choice(['USD', 'CNY'])
 
-CRYPTOINTERVAL = 'daily'
-# ['daily', 'weekly', 'monthly'] are the other options
+CRYPTOINTERVAL = random.choice(['daily', 'weekly', 'monthly'])
 
-CRYPTOPLOT = 'open'
-#['close', 'open', 'high', 'low', 'marketcapital'] are the other options
+CRYPTOPLOT = random.choice(['close', 'open', 'high', 'low', 'marketcapital'])
 
 #############  Value customization end    #################
 
@@ -155,20 +148,24 @@ def save_chart(values, crypto_market):
 
 def rewrite_readme():
     alt_text = 'AlphaVantage-Action-Bot-Chart'
-    promote_text = "**Realtime Stock/Crytpocurrency Chart📈  Rendered By [AlphaVantage-Action-Bot](https://github.com/manojnaidu619/AlphaVantage-Action-Bot)**"
+    now = datetime.now().strftime("%b %d, %Y(%H:%M:%S)")
+    promote_text = "**Realtime Stock/Crytpocurrency Chart📈  Rendered By [AlphaVantage-Action-Bot](https://github.com/manojnaidu619/AlphaVantage-Action-Bot) | Last updated the above chart on {} **".format(now)
     code_line = f'![{alt_text}]({PATHTOCHART}/chart.png)'
     readme = './README.md'
-    line = RENDERLINE
-    line -= 1
+    line = RENDERLINE-1
+    parsed_data = []
 
     def insert_string(array, pos, data):
-        array.insert(pos, "{}\n".format(data))
-        array.insert(pos + 1, "{}\n".format(promote_text))
+        array.insert(pos, "{} \n".format(data))
+        array.insert(pos + 1, "{} \n".format(promote_text))
 
     with open(readme, 'r') as file: data = file.readlines()
     for index, x in enumerate(data):
-        if x.startswith("![{}]".format(alt_text)): del data[index]   
-        if x.startswith("**Realtime Stock/Crytpocurrency Chart"): del data[index]    
+        to_remove = False
+        if x.startswith("![{}]".format(alt_text)): to_remove = True
+        if x.startswith('**Realtime Stock/Crytpocurrency Chart'): to_remove = True
+        if not to_remove: parsed_data.append(x)    
+    data = parsed_data        
     insert_string(data, line, code_line)    
     with open(readme, 'w') as file: file.writelines( data )
         
@@ -179,3 +176,5 @@ if (request_type != False and request_object != False):
     values, columns = make_request(request_type, request_object)
     save_chart(values, CRYPTOMARKET)
     rewrite_readme()
+
+    
