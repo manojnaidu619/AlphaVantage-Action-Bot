@@ -9,10 +9,10 @@ from alpha_vantage.cryptocurrencies import CryptoCurrencies
 CHARTDOMAIN = 'stock'
 #['stock', 'cryptocurrency']
 
-REQ_TYPE = 'daily'
+REQ_TYPE = 'intraday'
 #['intraday', 'daily', 'weekly', 'monthly'] are the other options.
 
-SYMBOL = 'AAPL'
+SYMBOL = 'AMZN'
 # Stock Symbol
 
 INTERVAL = 5
