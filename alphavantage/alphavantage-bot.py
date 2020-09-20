@@ -30,7 +30,7 @@ RENDERLINE = 4
 
 ################### If CHARTDOMAIN is set to 'cryptocurrency' then edit these below  ####################################
 
-CRYPTOSYMBOL = random.choice(['BTC', 'ETH', 'LTC', 'XRP', 'PPC', 'DOGE', 'GRC', 'XPM', 'DASH', 'BCH'])
+CRYPTOSYMBOL = random.choice(['BTC', 'ETH'])
 # Cryptocurrency symbol
 
 CRYPTOMARKET = random.choice(['USD', 'CNY'])
