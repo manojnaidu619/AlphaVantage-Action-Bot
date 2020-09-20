@@ -23,7 +23,7 @@ GRIDVIEW = True
 
 PLOT = random.choice(['close', 'open', 'high', 'low'])
 
-COLOR = random.choice(['blue', 'green', 'cyan', 'magenta', 'black', 'yellow', 'orange'])
+COLOR = random.choice(['blue', 'green', 'cyan', 'magenta', 'black', 'orange'])
 
 RENDERLINE = 4
 # Line inside Readme at which the chart to be rendered.
