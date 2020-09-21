@@ -20,7 +20,7 @@ OUTPUTSIZE = 'full'
 #['compact', 'full'] are the other options.
 
 PATHTOCHART = './alphavantage'
-GRIDVIEW = random.chice([True, False])
+GRIDVIEW = random.choice([True, False])
 
 PLOT = random.choice(['close', 'open', 'high', 'low'])
 
