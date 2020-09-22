@@ -6,7 +6,7 @@ from alpha_vantage.cryptocurrencies import CryptoCurrencies
 
 ####### Values could be customized ############
 
-CHARTDOMAIN = 'stock'
+CHARTDOMAIN = random.choice(['stock', 'cryptocurrency'])
 # ['stock', 'cryptocurrency'] are the other options
 
 REQ_TYPE = random.choice(['intraday', 'daily', 'weekly', 'monthly'])
