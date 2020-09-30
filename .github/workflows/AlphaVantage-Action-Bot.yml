@@ -2,7 +2,7 @@ name: AlphaVantage-Action-Bot
 
 on:
   schedule:
-    - cron: "0 0 * * 1,3,5"  
+    - cron: "0 0 * * 1,5"  
     # To know more about crontabs refer https://crontab.guru/
 
 jobs:
