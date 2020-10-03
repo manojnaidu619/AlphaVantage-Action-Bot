@@ -9,7 +9,8 @@ Hello programmers, hope you are all doing fantastic!🥳 .We all know that Readm
 This action makes the best use of readme file to show the trajectory of stock prices in order to gauge your company’s general health.
 
 ## What Is it?
-**AlphaVantage Action Bot** is a Github action that renders the realtime chart of a stock/cryptocurrency inside the readme file.
+
+**AlphaVantage Action Bot** is a Github action that renders the realtime chart of a stock/cryptocurrency inside the readme file. We will be using the [Alpha Vantage Public Stock APIs](https://www.alphavantage.co/) to build the action bot. You may also check out [this finance API guide](https://medium.com/@patrick.collins_58673/stock-api-landscape-5c6e054ee631) that surveys some of the popular stock and crypto data APIs in the market.
 
 ## Screenshots
 
@@ -104,6 +105,8 @@ Now, your workflow file's path should like something like this...
 ##### Congrats! You have successfully set up the workflow 😎
 
 ### Additional Resources / Info
+
+**Special Thanks to the AlphaVantage team for reaching me out on this project✌️**
 
 * [Github Actions Docs](https://docs.github.com/en/actions)
 * [What are Github actions?](https://www.youtube.com/watch?v=5ncuRFwnrdc&ab_channel=EddieJaoude)
