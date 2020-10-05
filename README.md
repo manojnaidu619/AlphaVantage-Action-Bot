@@ -4,15 +4,15 @@
 ![AlphaVantage-Action-Bot-Chart](./alphavantage/chart.png) 
 **Realtime Stock/Crytpocurrency Chart📈  Rendered By [AlphaVantage-Action-Bot](https://github.com/manojnaidu619/AlphaVantage-Action-Bot) | Last updated the above chart on Oct 05, 2020(00:20:00) ** 
 
-📌 **Click on DEV logo below to view detailed post**
+Hello programmers, hope you are all doing fantastic!🥳 .We all know that Readme file is crucial for any repository, it serves as a user manual and helps us in getting started. 
+
+This action makes the best use of readme file to show the trajectory of stock prices in order to gauge your company’s general health.
+
+📌 **Click on DEV logo below to view detailed article**
 
 <a href="https://dev.to/manojnaidu619/alphavantage-action-bot-3d05">
   <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Manoj Naidu's DEV Profile" height="100" width="100">
 </a>
-
-Hello programmers, hope you are all doing fantastic!🥳 .We all know that Readme file is crucial for any repository, it serves as a user manual and helps us in getting started. 
-
-This action makes the best use of readme file to show the trajectory of stock prices in order to gauge your company’s general health.
 
 ## What Is it?
 
