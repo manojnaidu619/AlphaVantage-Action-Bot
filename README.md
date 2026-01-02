@@ -2,7 +2,7 @@
 ### A github action to render real-time stocks/cryptocurrency charts inside readme 
 
 ![AlphaVantage-Action-Bot-Chart](./alphavantage/chart.png) 
-**Realtime Stock/Crytpocurrency Chart📈  Rendered By [AlphaVantage-Action-Bot](https://github.com/manojnaidu619/AlphaVantage-Action-Bot) | Last updated the above chart on Dec 15, 2025(01:11:25) ** 
+**Realtime Stock/Crytpocurrency Chart📈  Rendered By [AlphaVantage-Action-Bot](https://github.com/manojnaidu619/AlphaVantage-Action-Bot) | Last updated the above chart on Jan 02, 2026(01:11:07) ** 
 
 Hello programmers, hope you are all doing fantastic!🥳 .We all know that Readme file is crucial for any repository, it serves as a user manual and helps us in getting started. 
 
